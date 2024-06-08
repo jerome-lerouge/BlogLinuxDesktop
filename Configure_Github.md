@@ -37,14 +37,33 @@ Copy the SSH public key to the clipboard:
 - Connect on Github account and start the process for creating the new repository.
 - Choose the GPL v3 copyleft license because I require that any modifications to your code be released under the same license, you should choose a copyleft license, such as the GPL v3.
 
+## First time git setup ##
+
+Show all the settings and where they are coming from
+`$ git config --list -show-origin
+$ git config --global user.name "Jérôme Lerouge"
+$ git config --global user.email jerome.lerouge@gmail.coming
+$ git config --global core.editor NVIM_APPNAME="Lazyvim" nvim`
+
 ## Contribute to an existing repository ##
 
-Download a repository on Github to our machine
+Download a repository on Github to our machine and chane into the repo directory
 
-`git clone git@github.com:jerome-lerouge/BlogLinuxDesktop.git`
+`$ git clone git@github.com:jerome-lerouge/BlogLinuxDesktop.git
+$ cd BlogLinuxDesktop`
+
+Stage the new files
+`$ git add *.md`
+
+Take a snapshot of the staging area (anything that's been added)
+`$ git commit -m "First save with all files currently being edited."`
+
+Push change to github
+`$ git push --set-upstream origin main`
 
 ## Documentation ##
 
 [Archlinux documentation for generating public](https://wiki.archlinux.org/title/SSH_keys)
 [Github Doc Authentification, connect with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 [Github Skills (course to learn basic github usage)](https://skills.github.com/)
+[A quick Github SSH Clone example](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/github-clone-with-ssh-keys)
